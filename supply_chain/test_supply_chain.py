@@ -12,5 +12,5 @@ def test_subnetworks():
             assert nx.is_weakly_connected(subnetwork)
             for v in subnetwork.nodes:
                 colors = {data["color"] for _, _, data in subnetwork.in_edges(v, data=True)}
-                assert len(colors) <= 1
+                assert len(colors) == 1
         
